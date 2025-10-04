@@ -16,10 +16,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_emisor');
             $table->unsignedBigInteger('id_receptor');
-            $table->string('moneda')->defaultValue('USD');
+            $table->string('monto');
             $table->string('fecha_transaccion')->defaultValue(Carbon::now())->nullable();
             $table->string('estado');
             $table->foreign('id_emisor')->references('id')->on('usuarios');
+            $table->foreign('id_receptor')->references('id')->on('usuarios');
         });
     }
 

@@ -15,4 +15,8 @@ class Usuarios extends Model
     {
         return $this->hasMany(Contactos::class, 'id_usuario', 'id');
     }
+     public function saldos()
+    {
+        return $this->hasOne(Saldos::class, 'id_usuario', 'id');
+    }
 }

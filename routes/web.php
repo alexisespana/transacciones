@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('layouts.Inicio');
 });
 Route::prefix('Transferencias')->group(function () {
-      Route::get('/transferencia', [TransferenciaController::class, 'index'])->name('transferencia');
+      Route::get('/transferencia', [TransferenciaController::class, 'index'])->name('realizar-transferencia');
       Route::post('/Transferir', [TransferenciaController::class, 'transferir'])->name('enviar-transferencia');
 });
 
