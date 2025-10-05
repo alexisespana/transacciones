@@ -33,7 +33,7 @@ class TransferenciaController extends Controller
 
             $validator =   $this->validator($request->all(),  $user);
             if ($validator->fails()) {
-                return response()->json(['message' => 'Existen errores para crear Centro Costo', 'data' => $validator->errors()->all()], 422);
+                return response()->json(['message' => 'Existen errores para transferencias', 'data' => $validator->errors()->all()], 422);
             } else {
                 $saldo_actual = Usuarios::with('saldos')->where('id', 1)->first();
 

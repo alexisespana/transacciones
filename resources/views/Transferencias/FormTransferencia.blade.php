@@ -83,7 +83,6 @@
                     if (e.request.status == 422) {
 
                         var error = e.response.data;
-                        console.log(error);
 
                         let errores = '<ul class="text-left">';
                         error.data.forEach(function(v, i) {

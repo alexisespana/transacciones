@@ -9,7 +9,7 @@ class Usuarios extends Model
     protected $table = 'usuarios';
     public $primaryKey = "id";
     public $timestamps = false;
-     protected $fillable = ['nombres','email'];
+     protected $fillable = ['nombres','email','estado'];
 
      public function contactos()
     {

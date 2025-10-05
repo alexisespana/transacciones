@@ -34,7 +34,7 @@ class TransaccionesExport implements FromCollection, WithMapping,WithCustomCsvSe
             $transaccion->id,
             $transaccion->emisor->nombres,
             $transaccion->receptor->nombres,
-            number_format($transaccion->monto, 2, '.', ','), // Aquí formateamos con comas y 2 decimales
+            number_format($transaccion->monto, 2, ',', '.'), // Aquí formateamos con comas y 2 decimales
             $transaccion->fecha_transaccion,
         ];
     }

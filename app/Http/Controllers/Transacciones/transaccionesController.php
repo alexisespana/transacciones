@@ -32,7 +32,7 @@ class transaccionesController extends Controller
                     'INDEX' => $index + 1,
                     'user_emisor' => $transacciones->emisor->nombres,
                     'user_receptor' => $transacciones->receptor->nombres,
-                    'monto' => $transacciones->monto,
+                    'monto' =>  number_format($transacciones->monto, 2, ',', '.'),
                     'fecha' => $transacciones->fecha_transaccion,
                     'estado' => $transacciones->estado == 1 ? 'Aceptada' : 'Rechazada',
                 ];
