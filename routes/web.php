@@ -11,9 +11,15 @@ Route::prefix('Transferencias')->group(function () {
       Route::get('/transferencia', [TransferenciaController::class, 'index'])->name('realizar-transferencia');
       Route::post('/Transferir', [TransferenciaController::class, 'transferir'])->name('enviar-transferencia');
 });
+Route::prefix('Movimientos')->group(function () {
+      Route::get('/historial', [TransferenciaController::class, 'index'])->name('mis-movimientos');
+
+});
 
 
 Route::prefix('Transacciones')->group(function () {
-      Route::get('/listar', [transaccionesController::class, 'index'])->name('listar-transacciones');
+      Route::get('/realizadas', [transaccionesController::class, 'index'])->name('transacciones');
+      Route::post('/listar', [transaccionesController::class, 'listarTransacciones'])->name('listar-transacciones');
+      Route::get('/exportar', [transaccionesController::class, 'exportarCsv'])->name('exportar-csv');
 
 });

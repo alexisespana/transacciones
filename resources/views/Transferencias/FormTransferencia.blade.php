@@ -47,7 +47,6 @@
         });
 
 
-        // ---------------ACCION PARA EDITAR UN CENTRO DE COSTO ---------------------
 
         $(document).on('click', '.enviar', function(event) {
 

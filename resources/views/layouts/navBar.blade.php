@@ -10,12 +10,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Transferencias/transferencia">Transferir</a>
                 </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/Movimientos/historial">Mis Movimientos</a>
+                </li>
+              
                
                 <li class="nav-item">
-                    <a class="nav-link" href="/Transacciones/listar">Transacciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Transferencias">Transaferecias</a>
+                    <a class="nav-link" href="/Transacciones/realizadas">transferencias entre Usuarios</a>
                 </li>
               
                 
